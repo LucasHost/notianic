@@ -1,5 +1,34 @@
+@import "vendor/reset";
+@import "vars";
+@import "mixins";
+@import "fonts";
+
+
 body {
-    background-color: black;
-    font-size: 21px;
-    color: white;
+    background: linear-gradient(101.56deg, #2C2C2C 1.56%, #1C1C1C 95.55%);
+
+    font-family: "Arodora Pro";
+    font-size: 20px;
+    color: $white;
+    margin: 0;
 }
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box
+}
+
+
+
+/* Blocks */
+@import "blocks/container";
+
+// header
+@import "blocks/header";
+@import "blocks/nav";
+
+//main
+
+
+//footer
