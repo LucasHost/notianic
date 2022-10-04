@@ -1,0 +1,1 @@
+!function(){const e=document.getElementById("navToggle");document.getElementById("navMobile"),e.addEventListener("click",(e=>{document.body.classList.toggle("show-nav")}))}();
