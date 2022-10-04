@@ -359,6 +359,21 @@ textarea {
     padding: 0.2em 0;
 }
 
+@font-face {
+    font-family: "Arodora Pro";
+  src: url("../fonts/ArodoraPro-Light.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "NEXT ART";
+  src: url("../fonts/NEXT ART_Bold.otf"), url("../fonts/NEXT ART_Regular.otf"), url("../fonts/NEXT ART_SemiBold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Nico Moji";
+  src: url("../fonts/NicoMoji-Regular.ttf") format("opentype");
+}
+
 body {
     background: linear-gradient(101.56deg, #2C2C2C 1.56%, #1C1C1C 95.55%);
     font-family: "Arodora Pro";
@@ -374,3 +389,78 @@ body {
 }
 
 /* Blocks */
+.container {
+    width: 100%;
+    max-width: 1240px;
+    padding: 0 20px;
+}
+
+header {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.header {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-top: 26px;
+}
+
+.header__logo {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.header__title {
+    font-family: "Nico Moji";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 18px;
+    margin-left: 10px;
+}
+
+.nav {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-right: 92px;
+}
+
+.nav__list {
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.nav__item:not(:last-child) {
+    margin-right: 145px;
+}
+
+.nav__link {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 21px;
+    color: #E4E4E4;
+    text-decoration: none;
+    position: relative;
+}
+
+.nav__link:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 1px;
+    background: #FFA500;
+    transition: width 0.3s;
+}
+
+.nav__link:hover:after {
+    width: 100%;
+}
