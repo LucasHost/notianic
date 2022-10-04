@@ -1,4 +1,4 @@
-assets & index.html в main относяться к демонстрации страницы.
+assets, index.html в main относяться к демонстрации страницы.
 
 №1 first commit / Поставил сборку gulp(scss)
 
