@@ -69,12 +69,15 @@
 }
 
 .nav__item {
-    margin-left: 100%;
+    
+    @include breakpoint($tablet-bp) {
+        margin-left: 100%;
 
     transition: all 1s linear;
 
     .show-nav & {
         margin: 0;
+    }
     }
 }
 
