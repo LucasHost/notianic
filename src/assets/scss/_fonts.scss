@@ -5,11 +5,9 @@
 
 @font-face {
     font-family: "NEXT ART";
-    src:
-    url("../fonts/NEXT ART_Bold.otf"),
-    url("../fonts/NEXT ART_Regular.otf"),
-    url("../fonts/NEXT ART_SemiBold.otf")
-    format("opentype");
+    src: url("../fonts/NEXT ART_Bold.otf") format("opentype");
+    src: url("../fonts/NEXT ART_Regular.otf") format("opentype");
+    src: url("../fonts/NEXT ART_SemiBold.otf") format("opentype");
 }
 
 @font-face {

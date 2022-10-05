@@ -50,16 +50,16 @@
             </div>
         </div>
         <ul class="nav__list  nav__list--borger" id="navMobile">
-            <li class="nav__item">
+            <li class="nav__item-one">
                 <a class="nav__link" href="#">Home</a>
             </li>
-            <li class="nav__item">
+            <li class="nav__item-two">
                 <a class="nav__link  nav__link--wrap" href="#">About me</a>
             </li>
-            <li class="nav__item">
+            <li class="nav__item-three">
                 <a class="nav__link" href="#">Portfolio</a>
             </li>
-            <li class="nav__item">
+            <li class="nav__item-four">
                 <a class="nav__link" href="#">Contact</a>
             </li>
         </ul>
@@ -67,7 +67,7 @@
 
     <main class="main">
         
-        <div class="intro">
+        <section class="intro">
             <div class="container">
                 <div class="intro__inner">
                     <div class="intro__content">
@@ -87,14 +87,14 @@
                         </div>
                         <h2 class="intro__tag-four">UI</h2>
                     </div>
-                </div>
-            </div>
-        </div>
+                </div> <!-- /.intro__inner -->
+            </div> <!-- /.container -->
+        </section> <!-- /.intro -->
         
-        <div class="about">
+        <section class="about">
             <div class="container  container--no">
                 <div class="about__inner">
-                    <section class="about__windows">
+                    <div class="about__windows">
                         <div class="about__windows-top">
                             <a class="about__window" href="#">
                                 <div class="about__window-content">
@@ -147,12 +147,37 @@
                                 </div>
                                 <span class="about__window-shadow"></span>
                             </a>
-                        </div>
-                    </section>
-                    <section class="about__content">2</section>
+                        </div> <!-- /.about__windows-bottom -->
+                    </div> <!-- /.about__windows -->
+                    <div class="about__basic">
+                        <div class="about__basic-icons">
+                            <div class="about__circle-one"></div>
+                            <div class="about__circles">
+                                <div class="about__circle-two"></div>
+                                <div class="about__circle-three"></div>
+                            </div>
+                        </div> <!-- /.about__basic-icons -->
+                        <div class="about__basic-content">
+                            <div class="about__baisic-together-image">
+                                <div class="about__baisic-iamges1">
+                                    <img src="assets/images/about1.png" alt="image">
+                                </div>
+                                <div class="about__baisic-iamges2">
+                                    <img src="assets/images/about2.png" alt="image">
+                                </div>
+                            </div>
+                            <div class="about__baisic-central">
+                                <h2 class="about__baisic-title">About me</h2>
+                                <p class="about__baisic-text">Hello again everyone! So, you already know that my name is Gleb. A little about myself: student, 18 y.o., athlete-football player, I love creativity since childhood, I live in Donetsk, Ukraine. Why programming? Everything is elementary - I like it, the profession of the future, thanks to which I can provide myself and fulfill my dream - travel, at the moment I specialize in web design, front-end and back-end development, turnkey websites. Why should you choose me? I approach each order with great responsibility and love, as I want to make a name for myself, exclude plagiarism and negligence, fully study the project, the client and its target audience, work for quality, trying to make an order as quickly and uniquely as possible, taking into account all the edits and wishes. By trusting me, you will get the maximum return for your project, save your nerves and time. If you are interested in me , you want to know something more or use my services, then I will provide all my contacts below.</p>
+                            </div>
+                            <div class="about__baisic-iamges3">
+                                <img src="assets/images/about3.png" alt="image">
+                            </div>
+                        </div> <!-- /.about__basic-content -->
+                    </div> <!-- /.about__basic -->
                 </div> <!-- /.about__inner -->
             </div> <!-- /.container -->
-        </div> <!-- /.about -->
+        </section> <!-- /.about -->
     </main>
 
     <footer>Footer</footer>
