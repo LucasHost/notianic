@@ -28,8 +28,8 @@
     }
 
     @include breakpoint($mobile-bp) {
-        font-size: 37px;
-        line-height: 39px;
+        font-size: 34px;
+        line-height: 34px;
     }
 }
 
@@ -49,10 +49,10 @@
     }
 
     @include breakpoint($mobile-bp) {
-        font-size: 46px;
+        font-size: 42px;
         line-height: 47px;
 
-        margin: 14px 0;
+        margin: 10px 0;
     }
 }
 
@@ -66,7 +66,7 @@
     margin-bottom: 40px;
 
     @include breakpoint($mobile-bp) {
-        font-size: 16px;
+        font-size: 14px;
         line-height: 20px;
     }
 }

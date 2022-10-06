@@ -61,6 +61,11 @@
             top: 0;
         }
     }
+
+    @include breakpoint($mobile-bp) {
+        width: 230px;
+        height: 260px;
+    }
 }
 
 .about__window-content {
@@ -84,6 +89,11 @@
     z-index: 2;
 
     transition: all 0.2s linear;
+
+    @include breakpoint($mobile-bp) {
+        width: 230px;
+        height: 230px;
+    }
 }
 
 .about__window-title {
@@ -114,6 +124,11 @@
     z-index: 1;
 
     opacity: 0.6;
+
+    @include breakpoint($mobile-bp) {
+        width: 210px;
+        margin-left: -105px;
+    }
 }
 
 
@@ -126,6 +141,10 @@
 
     @include breakpoint($notebook-bp) {
         margin: 104px 0 50px 0;
+    }
+
+    @include breakpoint($mobile-bp) {
+        padding: 80px 0 50px 0;
     }
 }
 
@@ -228,8 +247,8 @@
     }
 
     @include breakpoint($mobile-bp) {
-        width: 280px;
-        height: 280px;
+        width: 240px;
+        height: 240px;
 
         margin-right: -30px;
 
@@ -332,7 +351,7 @@
     }
 
     @include breakpoint($mobile-bp) {
-        padding: 30px 20px;
+        padding: 20px 10px;
     }
 }
 
@@ -370,7 +389,7 @@
     }
 
     @include breakpoint($mobile-bp) {
-        width: 250px;
+        width: 240px;
         font-size: 14px;
         line-height: 20px;
     }

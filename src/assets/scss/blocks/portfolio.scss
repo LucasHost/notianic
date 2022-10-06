@@ -1,0 +1,291 @@
+.portfolio {
+    display: flex;
+    justify-content: center;
+}
+
+.portfolio__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    margin: 100px 0 150px 0;
+
+    @include breakpoint($notebook_m-bp) {
+        margin: 70px 0 120px 0;
+    }
+}
+
+.portfolio__title {
+    color: $white;
+    font-family: 'NEXT ART';
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 54px;
+
+    text-align: center;
+
+    margin-bottom: 50px;
+
+    @include breakpoint($mobile-bp) {
+        font-size: 36px;
+        line-height: 36px;
+    }
+}
+
+// slider
+.portfolio__sliders {
+    width: fit-content;
+    height: fit-content;
+
+    position: relative;
+}
+
+.portfolio__slider {
+    width: 100%;
+    max-width: 970px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: linear-gradient(130.68deg, #414141 0%, #2D2D2D 100.52%);
+    box-shadow: 0px 4px 15px rgba(27, 27, 27, 0.28);
+    border-radius: 29px;
+
+    padding: 50px;
+
+    position: relative;
+    z-index: 3;
+
+    img {
+        height: 100%;
+    }
+
+    @include breakpoint($notebook_l-bp) {
+        padding: 35px;
+    }
+
+    @include breakpoint($notebook-bp) {
+        flex-direction: column;
+    }
+
+    @include breakpoint($tablet-bp) {
+        padding: 15px 15px 75px 15px;
+    }
+
+    @include breakpoint($mobile-bp) {
+        height: 700px;
+        padding: 10px 10px 75px 10px;
+    }
+}
+
+.portfolio__image {
+    width: 100%;
+    max-width: 493px;
+    height: 500px;
+
+    display: flex;
+    justify-content: center;
+
+    overflow: hidden;
+
+    border-radius: 29px;
+
+    @include breakpoint($notebook_m-bp) {
+        max-width: 427px;
+        height: 430px;
+    }
+
+    @include breakpoint($notebook-bp) {
+        max-width: 500px;
+        height: 350px;
+    }
+
+    @include breakpoint($tablet-bp) {
+        max-width: 360px;
+        height: 280px;
+    }
+
+    @include breakpoint($mobile-bp) {
+        max-width: 240px;
+        height: 280px;
+    }
+}
+
+.portfolio__slider-numbertext {
+    position: absolute;
+    z-index: 2;
+    top: 20px;
+    left: 20px;
+}
+
+.portfolio__slider-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-left: 80px;
+
+    @include breakpoint($notebook_l-bp) {
+        margin-left: 30px;
+    }
+
+    @include breakpoint($notebook-bp) {
+        margin-left: 0;
+    }
+}
+
+.portfolio__slider-title {
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+
+    @include breakpoint($notebook-bp) {
+        margin-top: 30px;
+    }
+
+    @include breakpoint($tablet-bp) {
+        margin-top: 25px;
+    }
+}
+
+.portfolio__slider-text {
+    width: 100%;
+    max-width: 296px;
+
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+
+    margin: 25px 0;
+
+    @include breakpoint($notebook_l-bp) {
+        margin: 10px 0;
+    }
+
+    @include breakpoint($notebook-bp) {
+        max-width: 500px;
+    }
+
+    @include breakpoint($mobile-bp) {
+        font-size: 16px;
+        line-height: 18px;
+    }
+}
+
+.portfolio__slider-linkText {
+    margin-left: -21px;
+
+    opacity: 1;
+
+    transition: opacity 0.2s linear;
+}
+
+.portfolio__slider-link {
+    width: fit-content;
+    text-decoration: none;
+    color: #e2a100;
+    font-size: 18px;
+    line-height: 21px;
+
+    position: relative;
+
+    svg {
+        position: absolute;
+        top: 50%;
+        right: -21px;
+        margin-top: -5px;
+
+        transition: all 0.2s linear;
+    }
+
+    &:hover {
+        .portfolio__slider-linkText {
+            opacity: 0.6;
+        }
+
+        svg {
+            right: -28px;
+        }
+    }
+}
+
+.previous,
+.next {
+    width: 60px;
+    height: 60px;
+
+    color: transparent;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    border-radius: 50%;
+
+    background: linear-gradient(87.32deg, #E2A300 4.47%, #E29500 95.53%);
+
+    cursor: pointer;
+
+    position: absolute;
+    z-index: 4;
+    top: 50%;
+    margin-top: -30px;
+
+    transition: transform 0.2s linear;
+
+    &:hover {
+        transform: scale(1.2);
+    }
+
+    @include breakpoint($tablet-bp) {
+        width: 50px;
+        height: 50px;
+        top: 100%;
+        margin-top: -65px;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}
+
+.previous {
+    left: -100px;
+
+    @include breakpoint($notebook_m-bp) {
+        left: -80px;
+    }
+
+    @include breakpoint($tablet-bp) {
+        left: 15px;
+    }
+}
+
+.next {
+    right: -100px;
+
+    @include breakpoint($notebook_m-bp) {
+        right: -80px;
+    }
+
+    @include breakpoint($tablet-bp) {
+        right: 15px;
+    }
+}
+
+/* Анимация слайдов */
+.portfolio__sliders .portfolio__slider {
+    animation-name: fade;
+    animation-duration: 1s;
+}
+@keyframes fade {
+    from {
+        opacity: 0.4
+    }
+    to {
+        opacity: 1
+    }
+}

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0-modified | 20110126
    License: none (public domain)
@@ -554,11 +555,9 @@ header {
 }
 
 @media (max-width: 425px) {
-    .nav__item:not(:last-child) {
-        margin-bottom: 0px;
-    }
-
-    .show-nav .nav__item:not(:last-child) {
+    .show-nav .nav__item-one,
+.show-nav .nav__item-two,
+.show-nav .nav__item-three {
         margin-bottom: 7px;
     }
 }
@@ -906,6 +905,7 @@ header {
 .about__windows-top {
     display: grid;
     grid-template-columns: 0fr 0fr 0fr 0fr;
+    grid-column-gap: 40px;
     -ms-flex-pack: center;
     justify-content: center;
     overflow: auto;
@@ -914,24 +914,35 @@ header {
 
 @media (max-width: 1150px) {
     .about__windows-top {
-        -ms-flex-pack: justify;
-        justify-content: space-between;
+        grid-template-columns: 0fr 0fr;
+    }
+}
+
+@media (max-width: 630px) {
+    .about__windows-top {
+        grid-template-columns: 0fr;
     }
 }
 
 .about__windows-bottom {
     display: grid;
     grid-template-columns: 0fr 0fr 0fr;
+    grid-column-gap: 40px;
     -ms-flex-pack: center;
     justify-content: center;
     overflow: auto;
     padding: 0 20px;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1150px) {
     .about__windows-bottom {
-        -ms-flex-pack: justify;
-        justify-content: space-between;
+        grid-template-columns: 0fr 0fr;
+    }
+}
+
+@media (max-width: 630px) {
+    .about__windows-bottom {
+        grid-template-columns: 0fr;
     }
 }
 
@@ -945,13 +956,6 @@ header {
 
 .about__window:hover div {
     top: 0;
-}
-
-@media (max-width: 1440px) {
-    .about__window {
-        width: 225px;
-        height: 255px;
-    }
 }
 
 .about__window-content {
@@ -974,17 +978,6 @@ header {
     top: 10px;
     z-index: 2;
     transition: all 0.2s linear;
-}
-
-@media (max-width: 1440px) {
-    .about__window-content {
-        width: 225px;
-        height: 225px;
-    }
-}
-
-.about__window:not(:last-child) {
-    margin-right: 40px;
 }
 
 .about__window-title {
@@ -1012,13 +1005,6 @@ header {
     margin-left: -120px;
     z-index: 1;
     opacity: 0.6;
-}
-
-@media (max-width: 1440px) {
-    .about__window-shadow {
-        width: 200px;
-        margin-left: -100px;
-    }
 }
 
 .about__basic {
@@ -1319,5 +1305,197 @@ header {
         width: 250px;
         font-size: 14px;
         line-height: 20px;
+    }
+}
+
+.portfolio {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.portfolio__inner {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: 100px 0 150px 0;
+}
+
+.portfolio__title {
+    color: #ffffff;
+    font-family: "NEXT ART";
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 54px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.portfolio__sliders {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    position: relative;
+}
+
+.portfolio__slider {
+    width: 100%;
+    max-width: 970px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-align: center;
+    align-items: center;
+    background: linear-gradient(130.68deg, #414141 0%, #2D2D2D 100.52%);
+    box-shadow: 0px 4px 15px rgba(27, 27, 27, 0.28);
+    border-radius: 29px;
+    padding: 50px;
+    position: relative;
+    z-index: 3;
+}
+
+.portfolio__slider img {
+    width: 100%;
+    max-width: 493px;
+}
+
+.portfolio__slider-numbertext {
+    position: absolute;
+    z-index: 2;
+    top: 20px;
+    left: 20px;
+}
+
+.portfolio__slider-content {
+    height: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-left: 80px;
+}
+
+.portfolio__slider-title {
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+}
+
+.portfolio__slider-text {
+    width: 100%;
+    max-width: 296px;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    margin: 25px 0;
+}
+
+.portfolio__slider-linkText {
+    margin-left: -21px;
+    opacity: 1;
+    transition: opacity 0.2s linear;
+}
+
+.portfolio__slider-link {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    text-decoration: none;
+    color: #e2a100;
+    font-size: 18px;
+    line-height: 21px;
+    position: relative;
+}
+
+.portfolio__slider-link svg {
+    position: absolute;
+    top: 50%;
+    right: -21px;
+    margin-top: -5px;
+    transition: all 0.2s linear;
+}
+
+.portfolio__slider-link:hover .portfolio__slider-linkText {
+    opacity: 0.6;
+}
+
+.portfolio__slider-link:hover svg {
+    right: -28px;
+}
+
+.previous,
+.next {
+    width: 60px;
+    height: 60px;
+    color: transparent;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-radius: 50%;
+    background: linear-gradient(87.32deg, #E2A300 4.47%, #E29500 95.53%);
+    cursor: pointer;
+    position: absolute;
+    z-index: 4;
+    top: 50%;
+    margin-top: -30px;
+    transition: -webkit-transform 0.2s linear;
+    transition: transform 0.2s linear;
+    transition: transform 0.2s linear, -webkit-transform 0.2s linear;
+}
+
+.previous:hover,
+.next:hover {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+.previous {
+    left: -100px;
+}
+
+.next {
+    right: -100px;
+}
+
+/* Анимация слайдов */
+.portfolio__sliders .portfolio__slider {
+    -webkit-animation-name: fade;
+    animation-name: fade;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: 0.4;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.4;
+    }
+
+    to {
+        opacity: 1;
     }
 }

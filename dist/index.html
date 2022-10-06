@@ -178,6 +178,118 @@
                 </div> <!-- /.about__inner -->
             </div> <!-- /.container -->
         </section> <!-- /.about -->
+        
+        <section class="portfolio">
+            <div class="container">
+                <div class="portfolio__inner">
+                    <h2 class="portfolio__title">Portfolio</h2>
+                        <div class="portfolio__sliders">
+                                <div class="portfolio__slider">
+                                    <div class="portfolio__image">
+                                        <img src="assets/images/image-slider1.png" alt="image">
+                                    </div>
+                                    <div class="portfolio__slider-content">
+                                        <div class="portfolio__slider-texts">
+                                            <h2 class="portfolio__slider-title">Landing Ice-cream</h2>
+                                            <p class="portfolio__slider-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut orci eu elit consequat posuere ut sed elit. Nulla et tristique felis. Morbi quis orci non purus blandit fringilla. Etiam et mollis eros. Duis venenatis vulputate lacus, non tristique eros placerat vel. Nam nec magna lacus. Etiam euismod egestas mauris nec mollis. Phasellus efficitur et ex vel condimentum. Cras enim purus, tempor sed massa vel, accumsan bibendum magna. Nullam hendrerit cursus purus, sit amet viverra arcu gravida vel.</p>
+                                        </div>
+                                        <a class="portfolio__slider-link" href="#">
+                                            <p class="portfolio__slider-linkText">More</p>
+                                            <svg width="14" height="10" viewBox="0 0 14 10">
+                                                <path d="M0 5H13M13 5L10.0286 9M13 5L10.0286 1" stroke="#E2A100"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+        
+                                <div class="portfolio__slider">
+                                    <div class="portfolio__image">
+                                        <img src="assets/images/image-slider2.png" alt="image">
+                                    </div>
+                                    <div class="portfolio__slider-content">
+                                        <div class="portfolio__slider-texts">
+                                            <h2 class="portfolio__slider-title">Landing Ice-cream</h2>
+                                            <p class="portfolio__slider-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut orci eu elit consequat posuere ut sed elit. Nulla et tristique felis. Morbi quis orci non purus blandit fringilla. Etiam et mollis eros. Duis venenatis vulputate lacus, non tristique eros placerat vel. Nam nec magna lacus. Etiam euismod egestas mauris nec mollis. Phasellus efficitur et ex vel condimentum. Cras enim purus, tempor sed massa vel, accumsan bibendum magna.</p>
+                                        </div>
+                                        <a class="portfolio__slider-link" href="#">
+                                            <p class="portfolio__slider-linkText">More</p>
+                                            <svg width="14" height="10" viewBox="0 0 14 10">
+                                                <path d="M0 5H13M13 5L10.0286 9M13 5L10.0286 1" stroke="#E2A100"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+        
+                                <div class="portfolio__slider">
+                                    <div class="portfolio__image">
+                                        <img src="assets/images/image-slider3.png" alt="image">
+                                    </div>
+                                    <div class="portfolio__slider-content">
+                                        <div class="portfolio__slider-texts">
+                                            <h2 class="portfolio__slider-title">Landing Ice-cream</h2>
+                                            <p class="portfolio__slider-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut orci eu elit consequat posuere ut sed elit. Nulla et tristique felis. Morbi quis orci non purus blandit fringilla. Etiam et mollis eros. Duis venenatis vulputate lacus, non tristique eros placerat vel. Nam nec magna lacus. Etiam euismod egestas mauris nec mollis. Phasellus efficitur et ex vel condimentum.</p>
+                                        </div>
+                                        <a class="portfolio__slider-link" href="#">
+                                            <p class="portfolio__slider-linkText">More</p>
+                                            <svg width="14" height="10" viewBox="0 0 14 10">
+                                                <path d="M0 5H13M13 5L10.0286 9M13 5L10.0286 1" stroke="#E2A100"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+        
+                            <a class="previous" onclick="previousSlide()">
+                                <svg width="26" height="24" viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11.5 1.5L1 12L11.5 22.5" stroke="#E4E4E4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M1 12H25" stroke="#E4E4E4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                            <a class="next" onclick="nextSlide()">
+                                <svg width="26" height="24" viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M14.5 1.5L25 12L14.5 22.5" stroke="#E4E4E4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M25 12H1" stroke="#E4E4E4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+        <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function nextSlide() {
+            showSlides(slideIndex += 1);
+        }
+        
+        function previousSlide() {
+            showSlides(slideIndex -= 1);  
+        }
+        
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("portfolio__slider");
+            
+            if (n > slides.length) {
+              slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+          
+            for (let slide of slides) {
+                slide.style.display = "none";
+            }   
+            slides[slideIndex - 1].style.display = "flex"; 
+        }
+        </script>
     </main>
 
     <footer>Footer</footer>
