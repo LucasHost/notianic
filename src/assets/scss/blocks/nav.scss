@@ -66,6 +66,33 @@
             align-items: center;
         }
     }
+
+    &--footer {
+        display: flex;
+        width: fit-content;
+        flex-direction: column;
+
+        .nav__item-one,
+        .nav__item-two,
+        .nav__item-three {
+            width: fit-content;
+            margin-bottom: 18px;
+
+            transform: translate(0, 0);
+        }
+        
+        .nav__item-four {
+            width: fit-content;
+
+            transform: translate(0, 0);
+        }
+
+        .nav__link {
+            &::after {
+                background: #FFA500;
+            }
+        }
+    }
 }
 
 .nav__item-one {
