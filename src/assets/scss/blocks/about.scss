@@ -62,7 +62,7 @@
         }
     }
 
-    @include breakpoint($mobile-bp) {
+    @include breakpoint($notebook_l-bp) {
         width: 230px;
         height: 260px;
     }
@@ -90,7 +90,7 @@
 
     transition: all 0.2s linear;
 
-    @include breakpoint($mobile-bp) {
+    @include breakpoint($notebook_l-bp) {
         width: 230px;
         height: 230px;
     }
@@ -125,7 +125,7 @@
 
     opacity: 0.6;
 
-    @include breakpoint($mobile-bp) {
+    @include breakpoint($notebook_l-bp) {
         width: 210px;
         margin-left: -105px;
     }

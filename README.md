@@ -14,3 +14,5 @@ assets, index.html в main относяться к демонстрации ст
 №6 added portfolio / добавил полностью чать "portfolio", сделал адаптив. Также добавил адаптив для совсем маленьких устройств (280px width)
 
 №7 added footer / добавил полностью часть "footer", сделал адаптив.
+
+№8 added smooth section navigation / Добавил плавную прокрутку по частям сайта (JS)
